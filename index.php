@@ -15,11 +15,20 @@
             <th>Prijs</th>
             <th>Delete</th>
         </tr>
-    </table>
-    <?php
-        include("read.php");
+        <?php
+            include("read.php");
 
-        $allCars = getInfo();
-    ?>
+            $allCars = getInfo();
+            foreach($allCars as $car){
+                echo "<tr>";
+                    echo "<td>$car->merk</td>";
+                    echo "<td>$car->model</td>";
+                    echo "<td>$car->topspeed</td>";
+                    echo "<td>$car->prijs</td>";
+                echo "</tr>";
+            }
+        ?>
+    </table>
+    
 </body>
 </html>
