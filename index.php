@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <title>Table</title>
 </head>
@@ -26,6 +27,7 @@
                     echo "<td>$car->model</td>";
                     echo "<td>$car->topspeed</td>";
                     echo "<td>$car->prijs</td>";
+                    echo "<td><span class='material-symbols-outlined'>delete</span></td>";
                 echo "</tr>";
             }
         ?>
