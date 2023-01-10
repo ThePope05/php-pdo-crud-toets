@@ -10,14 +10,28 @@ td, th{
     border-width: .1rem;
 }
 
-span{
+table span{
     color: red;
+}
+form span{
+    color: rgb(71, 71, 71);
 }
 
 button{
     background-color: #fff0;
     border: none;
 }
-button:hover > span{
+table button:hover > span{
     color: rgb(170, 0, 0);
+}
+form button:hover > span{
+    color: rgb(31, 31, 31);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+form > input, form > button{
+    width: max-content;
 }

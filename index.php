@@ -34,5 +34,16 @@
             }
         ?>
     </table>
+
+    <form action="create.php" method="get">
+        <input type="text" placeholder="Merk" name="merk">
+        <input type="text" placeholder="Model" name="model">
+        <input type="text" placeholder="Snelheid" name="speed">
+        <input type="text" placeholder="Prijs" name="prijs">
+        <button type="submit">
+            <span class='material-symbols-outlined'>add</span>
+        </button>
+    </form>
+    
 </body>
 </html>

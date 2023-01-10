@@ -23,9 +23,18 @@ VALUES (NULL,
 $statement = $pdo->prepare($sql);
 
 $statement->bindValue(':merk', $_GET["merk"], PDO::PARAM_STR);
+$statement->bindValue(':model', $_GET["model"], PDO::PARAM_STR);
+$statement->bindValue(':topspeed', $_GET["speed"], PDO::PARAM_STR);
+$statement->bindValue(':prijs', $_GET["prijs"], PDO::PARAM_STR);
+
 
 $statement->execute();
 
-$result = $statement->fetchAll(PDO::FETCH_OBJ);
-
-return $result;
+if($statement){
+    echo "Record is toegevoegd";
+    header('Refresh:3; url=index.php');
+}
+else{
+    echo "Record is niet toegevoegd";
+    header('Refresh:3; url=index.php');
+}
