@@ -9,7 +9,7 @@ function getInfo(){
         echo $e->getMessage();
     }
 
-    $sql = "SELECT * FROM dureauto";
+    $sql = "SELECT * FROM dureauto ORDER BY prijs asc";
 
     $statement = $pdo->prepare($sql);
 

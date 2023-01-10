@@ -1,24 +1,28 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=php-pdo-crud-toets;charset=UTF8";
+delCol($_GET["id"]);
 
-try {
-    $pdo = new PDO($dsn, "root", "15122005");
-} catch(PDOException $e){
-    echo $e->getMessage();
-}
+function delCol($inputId){
+    $dsn = "mysql:host=localhost;dbname=php-pdo-crud-toets;charset=UTF8";
 
-$sql = "DELETE FROM dureauto WHERE id = :tmpId";
+    try {
+        $pdo = new PDO($dsn, "root", "15122005");
+    } catch(PDOException $e){
+        echo $e->getMessage();
+    }
 
-$statement = $pdo->prepare($sql);
+    $sql = "DELETE FROM dureauto WHERE id = :tmpId";
 
-$statement->bindValue(':tmpId', $_GET["id"], PDO::PARAM_INT);
-$statement->execute();
-if($statement){
-    echo "Record is verwijderd";
-    header('Refresh:3; url=index.php');
-}
-else{
-    echo "Record is niet verwijderd";
-    header('Refresh:3; url=index.php');
+    $statement = $pdo->prepare($sql);
+
+    $statement->bindValue(':tmpId', $inputId, PDO::PARAM_INT);
+    $statement->execute();
+    if($statement){
+        echo "Record is verwijderd";
+        header('Refresh:3; url=index.php');
+    }
+    else{
+        echo "Record is niet verwijderd";
+        header('Refresh:3; url=index.php');
+    }
 }
