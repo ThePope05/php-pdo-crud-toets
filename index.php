@@ -19,6 +19,7 @@
         </tr>
         <?php
             include("read.php");
+            include("delete.php");
 
             $allCars = getInfo();
             foreach($allCars as $car){
@@ -27,7 +28,7 @@
                     echo "<td>$car->model</td>";
                     echo "<td>$car->topspeed</td>";
                     echo "<td>$car->prijs</td>";
-                    echo "<td><span class='material-symbols-outlined'>delete</span></td>";
+                    echo "<td><a href='delete.php?id='$car->id''>Delete record</a></td>";
                 echo "</tr>";
             }
         ?>
