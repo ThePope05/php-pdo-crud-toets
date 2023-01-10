@@ -28,12 +28,11 @@
                     echo "<td>$car->topspeed</td>";
                     echo "<td>$car->prijs</td>";
                     echo "<td><a href='delete.php?id=$car->id'>
-                    <span class='material-symbols-outlined'>delete</span>
-                    </a></td>";
+                        <span class='material-symbols-outlined'>delete</span>
+                        </a></td>";
                 echo "</tr>";
             }
         ?>
     </table>
-    
 </body>
 </html>
